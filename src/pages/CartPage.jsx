@@ -22,7 +22,7 @@ const CartPage = () => {
   const apiUrl = import.meta.env.VITE_API_URL;
   const handle_Payment = async (event) => {
     event.preventDefault();
-    if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4||amount.length!==total1) {
+    if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4||parseFloat(amount) !== total1) {
       toast.error("Please fill the correct details");
       return;
     }
@@ -64,9 +64,8 @@ const CartPage = () => {
 
       });
       
-      return <>
-        {`Rupee ${total}`}
-      </>
+      return total
+
     } catch (error) {
       console.log(error);
     }
@@ -148,7 +147,7 @@ const CartPage = () => {
               <h2>Cart details</h2>
               <p>Total | Checkout | Payment</p>
               <hr />
-              <h4>Total : {total1} </h4>
+              <h4>Total : Rs {total1} </h4>
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">

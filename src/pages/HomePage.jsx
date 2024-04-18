@@ -96,7 +96,7 @@ const HomePage = () => {
               <div className="pro" key={p._id} onClick={() => navigate(`/product/${p.slug}`)}>
              
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`${apiUrl}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />

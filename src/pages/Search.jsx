@@ -20,7 +20,7 @@ const Search = () => {
             {values?.results.map((p) => (
               <div className="card m-2" id="cardpro" >
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`${apiUrl}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                   style={{width:"100%",objectFit:"cover",height:"200px", overflow:"hidden"}}

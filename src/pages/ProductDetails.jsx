@@ -35,7 +35,7 @@ const ProductDetails = () => {
     <div className="row justify-content-center">
       <div className="col-lg-6">
       <img
-            src={`/api/v1/product/product-photo/${product._id}`}
+            src={`${apiUrl}/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
             height="300"

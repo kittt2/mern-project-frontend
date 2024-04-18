@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [auth,setauth]=useauth();
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const navigate = useNavigate();
 const location=useLocation();
@@ -15,7 +16,7 @@ const location=useLocation();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://react-project-sex5.onrender.com/api/v1/auth/login", {
+      const res = await axios.post(`${apiUrl}/api/v1/auth/login`, {
         email,
         password,
       });

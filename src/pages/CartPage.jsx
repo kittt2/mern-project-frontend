@@ -14,7 +14,7 @@ const CartPage = () => {
   const [instance, setInstance] = useState("");
   // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
+  const apiUrl = import.meta.env.VITE_API_URL;
 
 
 

@@ -18,7 +18,7 @@ const UpdateProduct = () => {
   const [shipping, setShipping] = useState("");
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   //get single product
   const getSingleProduct = async () => {
     try {

@@ -11,7 +11,7 @@ const Forgetpassword = () => {
   const [email, setEmail] = useState("");
   const [newpassword, setnewPassword] = useState("");
   const [answer, setAnswer] = useState("");
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 const location=useLocation();
   // form function

@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const [cart, setCart] = useCart();
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   //initalp details
   useEffect(() => {
     if (params?.slug) getProduct();

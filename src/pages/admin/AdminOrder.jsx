@@ -17,6 +17,7 @@ const AdminOrders = () => {
   ]);
   const [changeStatus, setCHangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [auth, setAuth] = useauth();
   const getOrders = async () => {
     try {

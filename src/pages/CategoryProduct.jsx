@@ -6,7 +6,7 @@ const CategoryProduct = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
   }, [params?.slug]);

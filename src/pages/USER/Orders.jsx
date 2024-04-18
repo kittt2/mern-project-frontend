@@ -7,6 +7,7 @@ import { useauth } from "../../context/Context";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useauth();
+  const apiUrl = import.meta.env.VITE_API_URL;
   const getOrders = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/auth/orders`);

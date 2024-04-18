@@ -8,6 +8,7 @@ const { Option } = Select;
 
 const CreateProduct = () => {
   const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 const Search = () => {
   const [values, setValues] = useSearch();
   const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_API_URL;
   return (
     
       <div className="container">

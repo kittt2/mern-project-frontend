@@ -7,7 +7,7 @@ import moment from "moment";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const getAllUsers = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/auth/all-users`);

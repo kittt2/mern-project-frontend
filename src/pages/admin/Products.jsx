@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   //getall products
   const getAllProducts = async () => {
     try {

@@ -10,7 +10,7 @@ const Createcategory = () => {
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState(null);
   const [updatedName, setUpdatedName] = useState("");
-  
+  const apiUrl = import.meta.env.VITE_API_URL;
   
   //handle Form
   const handleSubmit = async (e) => {

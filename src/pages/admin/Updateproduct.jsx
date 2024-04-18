@@ -70,7 +70,7 @@ const UpdateProduct = () => {
       photo && productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.put(
-        `/api/v1/product/update-product/${id}`,
+        `${apiUrl}/api/v1/product/update-product/${id}`,
         productData
       );
       if (data?.success) {

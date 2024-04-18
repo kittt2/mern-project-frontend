@@ -41,7 +41,7 @@ const CartPage = () => {
       };
 
       try {
-        const response = await axios.post(`${apiUrl}/api/v1/product/process-payment`, paymentData);
+        const response = await axios.post(`https://react-project-sex5.onrender.com/api/v1/product/process-payment`, paymentData);
         console.log(response.data); // Log response from backend
         // Handle success response, e.g., show success message or redirect to a thank you page
         setLoading(true);

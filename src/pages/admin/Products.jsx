@@ -42,7 +42,7 @@ const Products = () => {
                 <div className="pro-container1">
                   <div className="pro2">
                     <img
-                      src={`/api/v1/product/product-photo/${p._id}`}
+                      src={`${apiUrl}/api/v1/product/product-photo/${p._id}`}
 
                       alt={p.name}
                     />

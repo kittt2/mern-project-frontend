@@ -29,7 +29,7 @@ const location=useLocation();
       }
     } catch (error) {
       console.log(error);
-      toast.error(error);
+      toast.error("eror");
     }
   };
   return (

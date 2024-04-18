@@ -12,20 +12,17 @@ const CartPage = () => {
   const [cart, setCart] = useCart();
   const [clientToken, setClientToken] = useState("");
   const [instance, setInstance] = useState("");
-  // const [loading, setLoading] = useState(false);
+  const [total1, settotal] = useState("")
   const navigate = useNavigate();
-
-
-
-
   const [cardNumber, setCardNumber] = useState('');
   const [expirationDate, setExpirationDate] = useState('');
   const [cvv, setCvv] = useState('');
+  const [amount, setamount] = useState('');
   const [loading, setLoading] = useState(false);
   const apiUrl = import.meta.env.VITE_API_URL;
   const handle_Payment = async (event) => {
     event.preventDefault();
-    if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {
+    if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4||amount.length!==total1) {
       toast.error("Please fill the correct details");
       return;
     }
@@ -39,8 +36,7 @@ const CartPage = () => {
 
       try {
         const response = await axios.post(`${apiUrl}/api/v1/product/process-payment`, paymentData);
-        console.log(response.data); // Log response from backend
-        // Handle success response, e.g., show success message or redirect to a thank you page
+        console.log(response.data); 
         setLoading(true);
         setLoading(false);
         localStorage.removeItem("cart");
@@ -50,7 +46,7 @@ const CartPage = () => {
       } catch (error) {
         console.error('Error:', error);
         setLoading(false);
-        // Handle error, e.g., show error message to the user
+
       } finally {
         setLoading(false);
       }
@@ -65,7 +61,9 @@ const CartPage = () => {
       let total = 0;
       cart?.map((item) => {
         total = total + item.price;
+
       });
+      settotal(total)
       return <>
         {`Rupee ${total}`}
       </>
@@ -214,6 +212,16 @@ const CartPage = () => {
                           id="cvv"
                           value={cvv}
                           onChange={(e) => setCvv(e.target.value)}
+                          required
+                          className="input"
+                        />
+                        <br />
+                        <label htmlFor="Amount">Amount:</label>
+                        <input
+                          type="number"
+                          id="amount"
+                          value={amount}
+                          onChange={(e) => setamount(e.target.value)}
                           required
                           className="input"
                         />

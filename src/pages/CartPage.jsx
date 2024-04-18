@@ -14,7 +14,7 @@ const CartPage = () => {
   const [instance, setInstance] = useState("");
   // const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL;
+
 
 
 
@@ -22,7 +22,7 @@ const CartPage = () => {
   const [expirationDate, setExpirationDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [loading, setLoading] = useState(false);
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const handle_Payment = async (event) => {
     event.preventDefault();
     if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {

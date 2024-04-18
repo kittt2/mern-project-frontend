@@ -1,12 +1,13 @@
 import { useState, useContext, createContext } from "react";
 
+
 const SearchContext = createContext();
 const SearchProvider = ({ children }) => {
   const [auth, setAuth] = useState({
     keyword: "",
     results: [],
   });
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   return (
     <SearchContext.Provider value={[auth, setAuth]}>
       {children}

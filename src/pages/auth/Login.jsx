@@ -15,7 +15,7 @@ const location=useLocation();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("VITE_API_URL/api/v1/auth/login", {
+      const res = await axios.post("https://react-project-sex5.onrender.com/api/v1/auth/login", {
         email,
         password,
       });

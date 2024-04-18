@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const SearchInput = () => {
   const [values, setValues] = useSearch();
   const navigate = useNavigate();
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

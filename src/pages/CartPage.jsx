@@ -32,16 +32,13 @@ const CartPage = () => {
 
     else {
       setLoading(true);
-
-      // Construct payload object
       const paymentData = {
-        nonce: 'fake-nonce', // Replace with actual payment nonce/token
-        cart: cart, // Assuming cart is passed as props
-        // Include other necessary data like cardNumber, expirationDate, cvv, etc.
+        nonce: 'fake-nonce', 
+        cart: cart, 
       };
 
       try {
-        const response = await axios.post(`https://react-project-sex5.onrender.com/api/v1/product/process-payment`, paymentData);
+        const response = await axios.post(`${apiUrl}/api/v1/product/process-payment`, paymentData);
         console.log(response.data); // Log response from backend
         // Handle success response, e.g., show success message or redirect to a thank you page
         setLoading(true);

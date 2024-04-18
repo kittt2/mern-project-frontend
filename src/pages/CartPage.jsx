@@ -148,7 +148,7 @@ const CartPage = () => {
               <h2>Cart details</h2>
               <p>Total | Checkout | Payment</p>
               <hr />
-              <h4>Total : {totalPrice} </h4>
+              <h4>Total : {total1} </h4>
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">

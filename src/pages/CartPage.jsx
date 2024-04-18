@@ -53,7 +53,7 @@ const CartPage = () => {
     }
   }
 
-
+  
 
   //total price
   const totalPrice = () => {
@@ -63,7 +63,7 @@ const CartPage = () => {
         total = total + item.price;
 
       });
-      settotal(total)
+      
       return <>
         {`Rupee ${total}`}
       </>
@@ -71,6 +71,14 @@ const CartPage = () => {
       console.log(error);
     }
   };
+   
+  useEffect(() => {
+      const total= totalPrice();
+         settotal(total)
+  }, [cart])
+  
+
+
   //detele item
   const removeCartItem = (pid) => {
     try {
@@ -140,7 +148,7 @@ const CartPage = () => {
               <h2>Cart details</h2>
               <p>Total | Checkout | Payment</p>
               <hr />
-              <h4>Total : {totalPrice()} </h4>
+              <h4>Total : {totalPrice} </h4>
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">

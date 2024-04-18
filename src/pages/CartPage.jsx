@@ -18,38 +18,37 @@ const CartPage = () => {
 
 
 
-    const [cardNumber, setCardNumber] = useState('');
-    const [expirationDate, setExpirationDate] = useState('');
-    const [cvv, setCvv] = useState('');
-    const [loading, setLoading] = useState(false);
-  
-    const handle_Payment = async (event) => {
-      event.preventDefault();
-      if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {
-        toast.error("Please fill the correct details");
-        return;
-      }
-    
-      else
-      {
+  const [cardNumber, setCardNumber] = useState('');
+  const [expirationDate, setExpirationDate] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handle_Payment = async (event) => {
+    event.preventDefault();
+    if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {
+      toast.error("Please fill the correct details");
+      return;
+    }
+
+    else {
       setLoading(true);
-  
+
       // Construct payload object
       const paymentData = {
         nonce: 'fake-nonce', // Replace with actual payment nonce/token
         cart: cart, // Assuming cart is passed as props
         // Include other necessary data like cardNumber, expirationDate, cvv, etc.
       };
-  
+
       try {
-        const response = await axios.post('http://localhost:8000/api/v1/product/process-payment', paymentData);
+        const response = await axios.post(`${apiUrl}/api/v1/product/process-payment`, paymentData);
         console.log(response.data); // Log response from backend
         // Handle success response, e.g., show success message or redirect to a thank you page
         setLoading(true);
-      setLoading(false);
-      localStorage.removeItem("cart");
-      setCart([]);
-      navigate("/dashboard/user/orders");
+        setLoading(false);
+        localStorage.removeItem("cart");
+        setCart([]);
+        navigate("/dashboard/user/orders");
         toast.success("Payment Completed Successfully ");
       } catch (error) {
         console.error('Error:', error);
@@ -57,9 +56,10 @@ const CartPage = () => {
         // Handle error, e.g., show error message to the user
       } finally {
         setLoading(false);
-      }}
+      }
     }
-    
+  }
+
 
 
   //total price
@@ -70,7 +70,7 @@ const CartPage = () => {
         total = total + item.price;
       });
       return <>
-      {`Rupee ${total}`}
+        {`Rupee ${total}`}
       </>
     } catch (error) {
       console.log(error);
@@ -89,18 +89,7 @@ const CartPage = () => {
     }
   };
 
-  //get payment gateway token
-  // const getToken = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/v1/product/braintree/token");
-  //     setClientToken(data?.clientToken);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   getToken();
-  // }, [auth?.token]);
+
 
 
   return (
@@ -115,9 +104,8 @@ const CartPage = () => {
                 : `Hello  ${auth?.token && auth?.user?.name}`}
               <p className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${
-                      auth?.token ? "" : "please login to checkout !"
-                    }`
+                  ? `You Have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout !"
+                  }`
                   : " Your Cart Is Empty"}
               </p>
             </h1>
@@ -195,49 +183,49 @@ const CartPage = () => {
                 </div>
               )}
               <div className="mt-2">
-                { !auth?.token || !cart?.length ? (
+                {!auth?.token || !cart?.length ? (
                   ""
                 ) : (
                   <>
-<div  className="form">
-<h1> Card Payment</h1>
-<form onSubmit={handle_Payment}>
-  <label htmlFor="cardNumber">Card Number:</label>
-  <input
-    type="text"
-    id="cardNumber"
-    value={cardNumber}
-    onChange={(e) => setCardNumber(e.target.value)}
-    required
-    className="input"
-  />
-  <br />
-  <label htmlFor="expirationDate">Expiration Date:</label>
-  <input
-    type="text"
-    id="expirationDate"
-    value={expirationDate}
-    onChange={(e) => setExpirationDate(e.target.value)}
-    placeholder="MM/YY"
-    required
-    className="input"
-  />
-  <br />
-  <label htmlFor="cvv">CVV:</label>
-  <input
-    type="text"
-    id="cvv"
-    value={cvv}
-    onChange={(e) => setCvv(e.target.value)}
-    required
-    className="input"
-  />
-  <br />
-  <button type="submit" disabled={loading} className="btn">
-    {loading ? 'Processing...' : 'Pay Now'}
-  </button>
-</form>
-</div>
+                    <div className="form">
+                      <h1> Card Payment</h1>
+                      <form onSubmit={handle_Payment}>
+                        <label htmlFor="cardNumber">Card Number:</label>
+                        <input
+                          type="text"
+                          id="cardNumber"
+                          value={cardNumber}
+                          onChange={(e) => setCardNumber(e.target.value)}
+                          required
+                          className="input"
+                        />
+                        <br />
+                        <label htmlFor="expirationDate">Expiration Date:</label>
+                        <input
+                          type="text"
+                          id="expirationDate"
+                          value={expirationDate}
+                          onChange={(e) => setExpirationDate(e.target.value)}
+                          placeholder="MM/YY"
+                          required
+                          className="input"
+                        />
+                        <br />
+                        <label htmlFor="cvv">CVV:</label>
+                        <input
+                          type="text"
+                          id="cvv"
+                          value={cvv}
+                          onChange={(e) => setCvv(e.target.value)}
+                          required
+                          className="input"
+                        />
+                        <br />
+                        <button type="submit" disabled={loading} className="btn">
+                          {loading ? 'Processing...' : 'Pay Now'}
+                        </button>
+                      </form>
+                    </div>
 
                   </>
                 )}
@@ -253,9 +241,9 @@ const CartPage = () => {
 
 
 
-</>
+    </>
 
-  
+
   );
 };
 

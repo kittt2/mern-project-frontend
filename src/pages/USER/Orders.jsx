@@ -9,7 +9,7 @@ const Orders = () => {
   const [auth, setAuth] = useauth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("/api/v1/auth/orders");
+      const { data } = await axios.get(`${apiUrl}/api/v1/auth/orders`);
       setOrders(data);
     } catch (error) {
       console.log(error);

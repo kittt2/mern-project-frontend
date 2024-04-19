@@ -24,7 +24,11 @@ const CartPage = () => {
     event.preventDefault();
     if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {
       toast.error("Please fill the correct details");
+      if (parseFloat(amount) !== parseFloat(total1)){
+        toast.error('Hi,enter the correct amount will you!');
+      }
       return;
+     
     }
 
     else {
@@ -32,6 +36,7 @@ const CartPage = () => {
       const paymentData = {
         nonce: 'fake-nonce', 
         cart: cart, 
+
       };
 
       try {
@@ -71,10 +76,10 @@ const CartPage = () => {
     }
   };
    
-  // useEffect(() => {
-  //     const total= totalPrice();
-  //        settotal(total)
-  // }, [cart])
+  useEffect(() => {
+      const total= totalPrice();
+         settotal(total)
+  }, [cart])
   
 
 
@@ -147,7 +152,7 @@ const CartPage = () => {
               <h2>Cart details</h2>
               <p>Total | Checkout | Payment</p>
               <hr />
-              <h4>Total : Rs {totalPrice()} </h4>
+              <h4>Total : Rs {total1} </h4>
               {auth?.user?.address ? (
                 <>
                   <div className="mb-3">
@@ -223,7 +228,7 @@ const CartPage = () => {
                           className="input"
                         />
                         <br />
-                        {/* <label htmlFor="Amount">Amount:</label>
+                        <label htmlFor="Amount">Amount:</label>
                         <input
                           type="number"
                           id="amount"
@@ -232,7 +237,7 @@ const CartPage = () => {
                           required
                           className="input"
                         />
-                        <br /> */}
+                        <br />
                         <button type="submit" disabled={loading} className="btn">
                           {loading ? 'Processing...' : 'Pay Now'}
                         </button>

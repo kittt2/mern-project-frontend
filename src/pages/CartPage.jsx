@@ -200,7 +200,7 @@ const CartPage = () => {
                         <label htmlFor="cardNumber">Card Number:</label>
                         <input
                           type="text"
-                          id="cardNumber"
+                          id="cardNumber must be 16 digit"
                           value={cardNumber}
                           onChange={(e) => setCardNumber(e.target.value)}
                           required
@@ -213,7 +213,7 @@ const CartPage = () => {
                           id="expirationDate"
                           value={expirationDate}
                           onChange={(e) => setExpirationDate(e.target.value)}
-                          placeholder="MM/YY"
+                          placeholder="4 digit expiry date "
                           required
                           className="input"
                         />

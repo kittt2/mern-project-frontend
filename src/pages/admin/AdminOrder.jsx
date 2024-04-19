@@ -22,8 +22,8 @@ const AdminOrders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/auth/all-orders`);
-      const ordersWithImages = data.filter(order => order.products.some(product => product.img));
-       setOrders(ordersWithImages);
+      const sortedOrders = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      setOrders(sortedOrders);
     } catch (error) {
       console.log(error);
     }

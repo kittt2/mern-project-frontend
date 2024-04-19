@@ -107,12 +107,8 @@ const HomePage = () => {
                       <h4>  {p.description.substring(0, 60)}...</h4>
                     </div>
                     <button class="cart"  onClick={() => {
-                        setCart([...cart, p]);
-                        localStorage.setItem(
-                          "cart",
-                          JSON.stringify([...cart, p])
-                        );
-                        toast.success("Item Added to cart");
+                        navigate(`/product/${p.slug}`)
+                        toast.success(" redirecting to product details ");
                       }}>🛒</button>
                   </div>
                
@@ -121,7 +117,7 @@ const HomePage = () => {
             </section>
           
           
-          <div className="m-2 p-3">
+          <div  id="loadmore">
             {products && products.length < total && (
               <button
                 className="btn loadmore"
@@ -131,7 +127,7 @@ const HomePage = () => {
                 }}
               >
                 {loading ? (
-                  "Loading ..."
+                  "Loading more products"
                 ) : (
                   <>
                     {" "}

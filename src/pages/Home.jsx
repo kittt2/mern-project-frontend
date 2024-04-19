@@ -1,12 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useauth } from "../context/Context";
-import { json } from "react-router-dom";
+import { Navigate, json, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
 
     const [auth, setauth] = useauth([]);
     const user = JSON.parse(localStorage.getItem('auth'))
+    const navigate=useNavigate()
 
     return (
         <>
@@ -23,7 +24,7 @@ const HomePage = () => {
                     <h2>super value deals</h2>
                     <h1>on all products</h1>
                     <p>save more with coupons </p>
-                    <button>shop now</button>
+                    <button onClick={()=>navigate("/shop")} >shop now</button>
                 </section>
                 <section id="feature" className="section-p1 ">
                     <div className="fe-box">
@@ -58,12 +59,12 @@ const HomePage = () => {
                     <div className="banner-box">
                         <h4>crazy deals</h4>
                         <h3>buy 1 get 10%    off</h3>
-                        <button className="white">learn more</button>
+                        <button className="white" onClick={()=>navigate("/shop")} >learn more</button>
                     </div>
                     <div className="banner-box banner-box2">
                         <h4>spring/summer</h4>
                         <h3>buy 1 get 10%   off</h3>
-                        <button className="white">collections</button>
+                        <button className="white" onClick={()=>navigate("/shop")} >collections</button>
                     </div>
                 </section>
                 <section id="banner3" className="section-p1">

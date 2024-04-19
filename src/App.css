@@ -86,54 +86,14 @@ body {
 
 }
 
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#navbar li {
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-}
-
-#navbar li a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(255, 253, 253);
-    transition: 0.3 ease;
-}
-
-#navbar li a:hover,
-#navbar li a.active {
-    color: aqua;
-}
-
-#navbar li a.active::after,
-#navbar li a:hover::after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: aqua;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-}
 
 #mobile {
     display: none;
     align-items: center;
 }
 
-#close {
-    display: none;
-}
-
 #hero {
-    background-image: url("../public/img/hero4.png");
+    background-image: url("img/hero4.png");
 
     height: 90vh;
     width: 100%;
@@ -217,15 +177,12 @@ body {
 #product1 .pro:hover {
     transform: scale(1.1);
     transition: 0.2s;
-
 }
 
 
 
 
 #product1 .pro {
-    
-    
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
@@ -510,22 +467,7 @@ footer .new {
         padding: 40px 40px;
     }
 
-    #navbar {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        right: -300px;
-        height: 100vh;
-        width: 300px;
-        background-color: rgb(0, 0, 0);
-        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
-        flex-direction: column;
-        padding: 80px 0 0 10px;
-        transition: 0.3s;
-
-    }
+   
 
     #navbar li {
         margin-bottom: 25px;
@@ -548,16 +490,7 @@ footer .new {
 
     }
 
-    #close {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        color: #ffffff;
-        font-size: 24px;
-        display: initial;
-
-
-    }
+    
 
     #bag {
         display: none;
@@ -721,26 +654,6 @@ h2 {
 
 }
 
-#pagination {
-    text-align: center;
-}
-
-#pagination a {
-    text-decoration: none;
-    background-color: rgb(91, 171, 144);
-    color: aliceblue;
-    border-radius: 5px;
-    font-weight: 700;
-    padding: 15px;
-}
-
-#pagination a i {
-    font-size: 15px;
-    font-weight: 600;
-
-
-}
-
 
 #prodetials .single-pro-img {
     width: 40%;
@@ -757,57 +670,6 @@ h2 {
     cursor: pointer;
 }
 
-#prodetials {
-    display: flex;
-    margin: 50PX;
-}
-
-#prodetials .single-pro-details {
-    width: 50%;
-    padding-top: 30px;
-}
-
-#prodetials .single-pro-details h4 {
-    padding: 40px 0 20px 0;
-}
-
-#prodetials .single-pro-details h2 {
-    padding: 40px 0 20px 0;
-    color: #222;
-}
-
-#prodetials .single-pro-details select {
-    padding: 5px 10px;
-    display: block;
-    margin-bottom: 10px;
-
-}
-
-#prodetials .single-pro-details input:focus {
-    outline: none;
-}
-
-#prodetials .single-pro-details input {
-    width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-
-#prodetials .single-pro-details button {
-    background: aquamarine;
-    color: whitesmoke;
-    height: 50px;
-    width: 20%;
-
-}
-
-#prodetials .single-pro-details span {
-    line-height: 25px;
-
-}
 
 #video {
     height: 50vh;
@@ -1181,522 +1043,6 @@ h2 {
 }
 
 
-/* login */
-
-.body-img {
-    background-color: #000000;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-#sign-up {
-    display: flex;
-    padding: 0;
-    width: 100%;
-
-    padding-left: 200px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
-    position: absolute;
-    margin: 0;
-
-}
-
-#sign-up img {
-
-    height: 350px;
-    margin: 460px 100px;
-    padding: 10px 50px;
-    background-color: transparent;
-    z-index: 5;
-    color: #fff0f0;
-
-
-}
-
-#sign-up section {
-
-    border: 3px solid black;
-    width: 45%;
-    background-image: url;
-
-}
-
-
-#sign-up .kostyle {
-
-    border: 3px solid black;
-    background-color: #000000;
-    height: 100vh;
-    background-image: url(https://bidunart.com/wp-content/uploads/2020/06/Portrait375-683x1024.jpg);
-}
-
-
-#sign-up #form-details1 {
-
-    border: 3px solid black;
-    background-color: white;
-    height: 100vh;
-
-
-}
-
-#form-details1 form input {
-
-    padding-bottom: 10px;
-
-}
-
-#form-details1 h2 {
-
-    font-size: 53px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
-    padding-left: 30px;
-
-}
-
-#form-details1 p {
-
-    font-size: 14px;
-    padding: 2px 40px;
-    font-weight: 500;
-    padding: 0 0 0 20px;
-
-}
-
-
-#form-details1 h3 {
-
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
-    padding-left: 30px;
-
-
-}
-
-#form-details1 form>h3 {
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 30px;
-    padding-left: 0;
-
-
-}
-
-#form-details1 form button {
-    font-size: 20px;
-    color: white;
-    background-color: #000000;
-    width: 120px;
-    height: 40px;
-    border-radius: 10px;
-    font-weight: bold;
-
-}
-
-#form-details1 form button:hover {
-    color: rgb(9, 1, 1);
-    background-color: transparent;
-    transition: 0.3s;
-}
-
-
-#form-details1 .form-btn {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-
-
-
-
-
-#form-details1 .form1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 70%;
-    height: 450px;
-    padding: 20px 20px 20px 140px;
-    flex-wrap: wrap;
-
-
-
-
-}
-
-
-@media (max-width:799px) {
-
-    #sign-up {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-    }
-
-    #sign-up section {
-
-        width: 100%;
-        height: 100%;
-        background-image: url;
-        margin: 0;
-        padding: 0;
-
-    }
-
-}
-
-@media (max-width:499px) {
-
-    #sign-up {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-
-    }
-
-    #sign-up section {
-
-        width: 100%;
-        height: 100%;
-        background-image: url;
-        margin: 0;
-        padding: 0;
-
-    }
-
-}
-
-
-@media (max-width:1069px) {
-
-    #sign-up {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-
-    }
-
-    #sign-up section {
-
-        width: 100%;
-        height: 100%;
-        background-image: url;
-        margin: 0;
-        padding: 0;
-
-    }
-
-}
-
-
-/* signup */
-#form-details1 .form2 {
-
-    display: flex;
-    flex-direction: column;
-
-    width: 70%;
-    height: 450px;
-    padding: 20px 20px 20px 140px;
-
-
-}
-
-
-#form-details1 .form2  input{
-   margin-bottom: 30px;
-   border: 1px solid black;
-}
-
-#prompt h1{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: black;
-    padding: 60px 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: center;
-   
-    color: whitesmoke;
-
-
-}
-
-#prompt h1:hover{
-    transform: scale(1.1);
-    transition: 0.2s;
-    color: white;
-    background-color: rgb(72, 255, 255);
-}
-
-#contact-form .a123{
-    background-color: rgb(255, 241, 241);
-    padding-bottom: 60px;
-}
-
-
-
-
-/* Style the table header */
-#cart-table th {
-    background-color: #f2f2f2;
-    padding: 10px;
-    text-align: left;
-}
-
-
-
-#Shoppingcartcontainer{
-    padding: 15px 231px;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-
-
-#Shoppingcartcontainer h3{
-    padding-bottom: 34px;
-    font-size: 34px;
-    padding-top: 24px;
-}
-
-
-#cart-table {
-    
-    
-    border-radius: 20px;
-    border: 2px solid#000000;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    width: 60%;
-    background-color:whitesmoke;
-
-
-}
-
-/* Style the table rows */
-#cart-table td {
-    padding: 20px;
-    text-align: center;
-    font-weight: 500;
-  
-}
-
-.remove-button {
-    background-color: black; /* Red background color */
-    color: white; /* White text color */
-    padding: 7px 20px;
-    border: 1px solid black;
-    cursor: pointer;
-    border-radius: 15px;
-    font-weight: 500;
-
-    
-}
-
-
-#prices{
-    font-weight: 700;
-    font-size: 23px;
-    color: black;
-    margin-top: 85px;
-}
-
-
-
-#prices :hover{
-   color: aqua;
-}
-
-
-.remove-button:hover{
-    background-color: aqua; /* Red background color */
-    color: white; /* White text color */
-   transform: scale(1.1);
-   transition: 0.2;
-}
-
-
-
-/* Style the "Pay Now" button */
-#method {
-    background-color: #00ffff;
-    color: #fff;
-    padding: 10px 20px;
-    border: 1px solid black;
-    cursor: pointer;
-    border-radius: 13px;
-    width: 200px;
-}
-
-#method:hover {
-    background-color: #021616;
-    color: #fff;
-}
-
-
-#method1 {
-    border: 2px solid;
-    padding: 50px 70px;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-    border-radius: 20px;
-}
-
-
-#methodcontainer h3{
-    font-size: 40px;
-   
-
-}
-/* Style the form input fields */
-#method1 .crdh,.crdn,.am {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 50%;
-    border: 1px solid black;
-}
-
-#method1 .exp,.no{
-    width: 25%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-}
-
-
-
-#methodcontainer{
-    padding: 50px;
-
-}
-/* Add more styles as needed */
-
-
-@media (max-width:499px){
-    #Shoppingcartcontainer{
-        padding: 15px 21px;
-        
-    }
-    #method1 .crdh,.crdn,.am {  
-        width: 100%;
-        outline: none;
-    }
-    
-    #method1 .exp,.no{
-        width: 49%;
-       outline: none;
-    }
-    #method1 {
-        padding: 40px 20px 20px 20px;
-        
-    }
-    
-
-    
-}
-
-#payimg{
-    width: 50%;
-    margin: 0 410px;
-    padding: 0;
-    
-}
-
-#payh1 h1{
-    text-align: center;
-    color: #56dbc5;
-    font-weight: 900;
-    font-size: 23px;
-    
-}
-
-#payp p{
-    color: #56dbc5;
-    text-align: center;
-    font-size: 23px;
-    font-weight: 500;
-}
-
-#paybtn{
-    text-align: center;
-    justify-content: center;
-    height: 40px;
-    width: 200px;
-    background-color: #00ffff;
-    border-radius: 15px;
-}
-
-#paybtn:hover{
-    background-color: #fbfbfb;
-    
-}
-#paybtnc a:hover{
-    color: black;
-}
-
-#paybtnc{
-    text-align: center;
-    justify-content: center; 
-}
-
-#paybtnc a{
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    color:white;
-}
-
-
-@media (max-width:799px){
-
-    #payimg{
-        width: 50%;
-        margin: 0 0;
-        padding: 0;
-        
-    }
-    
-   
-
-    
-}
-
-@media (max-width:499px){
-
-    #payimg{
-        width: 100%;
-        margin: 0 -23px;
-        padding: 0;
-        
-    }
-
-    
-    #payimg img{
-        width: 100%;
-       
-        margin: 0 20px;
-    }
-    
-
-    
-}
-
 .dropdown{
 
     margin-left: 10px;
@@ -1833,10 +1179,15 @@ h2 {
     height: 70vh;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding: 10px;
+    font-size: 17px;
 }
 
 #cont2 h2{
-    margin-top:40px;
+    margin-top:20px;
+    font-size: 50px;
+}
+#cont2 h1{
+    font-size: 30px;
 }
 
 #icon{
@@ -1866,6 +1217,8 @@ h2 {
 #nav2{
     background-color: #000000;
     border-radius: solid black 9px;
+    
+    
 }
 #badge{
     margin-left: -10px;
@@ -1892,6 +1245,7 @@ h2 {
   text-align: center;
   padding: 7px;
   margin: 5px;
+  
 
 }
 #navlinkid:hover{
@@ -1899,6 +1253,7 @@ h2 {
     transform: scale(1.1);
     color:white;
     transition: 0.3s;
+    
   }
 
 #profileuser{
@@ -2011,10 +1366,16 @@ h2 {
 
 }
 #cont2 {
-   font-size: 20px;
+   font-size: 15px;
 }
 #cont2 h2{
-    margin-top:40px;
+    margin-top:20px;
+    font-size: 30px;
+}
+
+#cont2 h1{
+
+    font-size: 30px;
 }
 
 

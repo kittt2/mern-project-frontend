@@ -51,12 +51,7 @@ const CategoryProduct = () => {
                       <h4>  {p.description.substring(0, 60)}...</h4>
                     </div>
                     <button class="add-to-cart" id="icon" onClick={() => {
-                        setCart([...cart, p]);
-                        localStorage.setItem(
-                          "cart",
-                          JSON.stringify([...cart, p])
-                        );
-                        toast.success("Item Added to cart");
+                        navigate(`/product/${p.slug}`)
                       }}>🛒</button>
                   </div>
                

@@ -23,7 +23,7 @@ const AdminOrders = () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/auth/all-orders`);
       const ordersWithImages = data.filter(order => order.products.some(product => product.img));
-    setOrders(ordersWithImages.reverse());
+       setOrders(ordersWithImages);
     } catch (error) {
       console.log(error);
     }

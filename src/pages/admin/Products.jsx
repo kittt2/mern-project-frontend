@@ -10,7 +10,10 @@ const Products = () => {
   const getAllProducts = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/product/get-product`);
-      setProducts(data.products);
+      const productsWithImages = data.filter((p) => p.img);
+      // Reverse the array to show newest data first
+      setProducts(productsWithImages.reverse());
+
     } catch (error) {
       console.log(error);
       toast.error("Someething Went Wrong");

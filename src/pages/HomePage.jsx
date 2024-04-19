@@ -117,7 +117,7 @@ const HomePage = () => {
             </section>
           
           
-          <div  id="loadmore">
+          <div  id="loadmorediv">
             {products && products.length < total && (
               <button
                 className="btn loadmore"
@@ -127,7 +127,7 @@ const HomePage = () => {
                 }}
               >
                 {loading ? (
-                  "Loading more products"
+                  "more products"
                 ) : (
                   <>
                     {" "}

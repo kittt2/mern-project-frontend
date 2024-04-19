@@ -1429,3 +1429,20 @@ h2 {
        padding-left: 45%;
        margin-bottom: 55px;
    }
+
+   #prompt{
+    background-color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px;
+   }
+   #prompt h1{
+  color: cyan;
+    
+   }
+
+   #prompt h1:hover{
+    color: white;
+    transform: scale(1.1);
+      
+     }

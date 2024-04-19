@@ -24,11 +24,12 @@ const CartPage = () => {
     event.preventDefault();
     if (cvv.length !== 3 || cardNumber.length !== 16 || expirationDate.length !== 4) {
       toast.error("Please fill the correct details");
-      if (parseFloat(amount) !== parseFloat(total1)){
-        toast.error('Hi,enter the correct amount will you!');
-      }
+      
       return;
      
+    }
+    else if(parseFloat(amount) !== parseFloat(total1)){
+      toast.error('Hi,enter the correct amount will you!');
     }
 
     else {

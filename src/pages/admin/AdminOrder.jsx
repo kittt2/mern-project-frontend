@@ -22,7 +22,9 @@ const AdminOrders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(`${apiUrl}/api/v1/auth/all-orders`);
-      setOrders(data);
+      const productsWithImages = data.filter((p) => p.img);
+      // Reverse the array to show newest data first
+      setOrders(productsWithImages.reverse());
     } catch (error) {
       console.log(error);
     }

@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import  { useState, useEffect } from "react";
-
+import toast from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 const Layout = () => {

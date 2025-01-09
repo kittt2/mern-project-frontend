@@ -7,15 +7,15 @@ const Pagenotfound = () => {
         <>
             <Helmet>
                 <div>
-                    <title>error | My Website</title>
+                    <title>error</title>
                     <meta name="description" content="Welcome to the Home Page" />
                 </div>
             </Helmet>
-            <div className="pnf">
-                <h1 className="pnf-title">404</h1>
-                <h2 className="pnf-heading">Oops ! Page Not Found</h2>
-                <Link to="/" className="pnf-btn">
-                    Back
+            <div className="container text-capitalize text-center align-content-center " style={{height:"100vh"}}>
+                <h1 className="text-center fs-3">404</h1>
+                <h2 className="text-center fs-1"> Page Not Found</h2>
+                <Link to="/" className="btn btn-dark">
+                    Go Back
                 </Link>
             </div>
         </>

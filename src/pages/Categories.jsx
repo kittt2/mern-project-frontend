@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import useCategory from "../hooks/useCategory";
 const Categories = () => {
   const categories = useCategory();
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   return (
   
       <div className="container" style={{ marginTop: "100px" }}>
@@ -10,7 +12,7 @@ const Categories = () => {
           {categories.map((c) => (
             <div className="col-md-4 mt-5 mb-3 gx-3 gy-3" key={c._id}>
               <div className="card">
-                <Link to={`/category/${c.slug}`} className="btn cat-btn">
+                <Link to={`${apiUrl}/category/${c.slug}`} className="btn cat-btn">
                   {c.name}
                 </Link>
               </div>

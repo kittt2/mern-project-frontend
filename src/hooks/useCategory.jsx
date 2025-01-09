@@ -5,13 +5,10 @@ export default function useCategory() {
   const [categories, setCategories] = useState([]);
   const apiUrl = import.meta.env.VITE_API_URL;
 
-  //get cat
   const getCategories = async () => {
     try {
-      
       const { data } = await axios.get(`${apiUrl}/api/v1/category/get-category`);
       setCategories(data?.category);
-      
     } catch (error) {
       console.log(error);
     }

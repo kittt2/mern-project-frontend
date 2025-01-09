@@ -12,6 +12,8 @@
   "dependencies": {
     "antd": "^5.15.3",
     "axios": "^1.6.8",
+    "backend": "file:..",
+    "bootstrap": "^5.3.3",
     "braintree-web-drop-in-react": "^1.2.1",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",

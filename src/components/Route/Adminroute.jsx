@@ -3,11 +3,13 @@ import { useauth } from "../../context/Context";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../Spinner";
-const apiUrl = import.meta.env.VITE_API_URL;
+
 
 export default function Adminroute() {
   const [ok, setOk] = useState(false);
   const [auth, setAuth] = useauth();
+  const apiUrl = import.meta.env.VITE_API_URL;
+
 
   useEffect(() => {
     const authCheck = async () => {

@@ -70,7 +70,7 @@ const HomePage = () => {
       
       <div
         className="container py-4"
-        style={products.length < 1 ? { height: "80vh" } : { height: "auto" }}
+        style={products?.length < 1 ? { height: "80vh" } : { height: "auto" }}
       >
         <img
           src="/img/banner/b1.jpg"

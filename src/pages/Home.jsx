@@ -129,7 +129,7 @@ const Homepage = () => {
         <div className="container">
           <h2 className="text-center fw-bold fs-1 mb-4">Featured Products</h2>
           <div className="row">
-            {products.map((product, index) => (
+            {products?.map((product, index) => (
               <div className="col-md-4 mb-4 rounded-5" key={index}>
                 <div className="card rounded-5 ">
                   <img
@@ -168,7 +168,7 @@ const Homepage = () => {
         <div className="container">
           <h2 className="text-center mb-4 fs-1 fw-bold">Top Categories</h2>
           <div className="row">
-            {category.map((category, index) => (
+            {category?.map((category, index) => (
               <div className="col-md-4 mb-4" key={index}>
                 <div className="card">
                   <img

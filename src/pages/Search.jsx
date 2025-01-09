@@ -27,7 +27,7 @@ const Search = () => {
               : `Found ${values?.results.length} product(s)`}
           </h6>
           <div className="d-flex flex-wrap justify-content-center gap-3">
-            {values?.results.map((p) => (
+            {values?.results?.map((p) => (
               <div
                 className="card border-0 rounded-5 shadow-sm"
                 style={{ width: "18rem" }}

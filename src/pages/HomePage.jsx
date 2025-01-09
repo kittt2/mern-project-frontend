@@ -19,13 +19,16 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log("API URL:", apiUrl);
     getAllProducts();
     getTotal();
+    
   }, []);
 
   const getAllProducts = async () => {
     try {
       setLoading(true);
+      
       const { data } = await axios.get(`${apiUrl}/api/v1/product/get-product`);
       setProducts(data.products);
       setLoading(false);

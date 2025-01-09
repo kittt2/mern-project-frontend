@@ -94,7 +94,7 @@ const AdminOrders = () => {
                             onChange={(value) => handleChange(o._id, value)}
                             defaultValue={o?.status}
                           >
-                            {status.map((s, index) => (
+                            {status?.map((s, index) => (
                               <Option key={index} value={s}>
                                 {s}
                               </Option>

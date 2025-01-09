@@ -46,7 +46,7 @@ const Products = () => {
         <div className="col-md-9">
           <h1 className="text-center mb-4 fw-bold" style={{ fontFamily: "Arial, sans-serif", color: "#343a40" }}>All Products List</h1>
           <div className="row">
-            {loading?<div className="container  text-center" style={{height:"100vh"}}> <h1>please wait..</h1> </div>:currentProducts.map((p) => (
+            {loading?<div className="container  text-center" style={{height:"100vh"}}> <h1>please wait..</h1> </div>:currentProducts?.map((p) => (
               <div key={p._id} className="col-lg-4 col-md-6 mb-4">
                 <Link to={`/dashboard/admin/product/${p.slug}`} className="text-decoration-none">
                   <div className="card h-100 shadow-sm rounded-3">

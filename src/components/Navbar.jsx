@@ -62,7 +62,7 @@ const Navbar = () => {
                   Categories
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="categoryDropdown">
-                  {categories.map((c) => (
+                  {categories?.map((c) => (
                     <li key={c.slug}>
                       <Link to={`/category/${c.slug}`} className="dropdown-item drop">
                         {c.name}

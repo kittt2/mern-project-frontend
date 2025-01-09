@@ -53,7 +53,7 @@ const Users = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentUsers.map((user, index) => (
+                {currentUsers?.map((user, index) => (
                   <tr key={user._id}>
                     <th scope="row">{indexOfFirstUser + index + 1}</th>
                     <td>{user.name}</td>
